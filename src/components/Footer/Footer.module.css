@@ -1,0 +1,36 @@
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 2rem 0;
+    width: 100%;
+}
+
+
+.logo {
+    width: 7.625rem;
+    height: 2.47139rem;
+    color: rgba(255, 255, 255, 1);
+}
+
+.footerText {
+    font-family: Roboto;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    .logo {
+        width: 5rem;
+        height: 1.6rem;
+    }
+
+    .footerText {
+        font-size: 0.75rem;
+    }
+}
