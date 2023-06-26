@@ -1,15 +1,13 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import User from './components/User'
+import { BrowserRouter as Router } from 'react-router-dom'
 import Layout from './components/Layout'
+import AppRouter from './routes/Router'
 
 function App() {
   return (
     <Router>
       <Layout>
-        <Routes>
-          <Route path="/user/:id" element={<User />} />
-        </Routes>
+        <AppRouter />
       </Layout>
     </Router>
   )
