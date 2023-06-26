@@ -4,7 +4,7 @@ class UserModel {
     this.firstName = userInfos.firstName
     this.lastName = userInfos.lastName
     this.age = userInfos.age
-    this.todayScore = userInfos.todayScore
+    this.score = userInfos.todayScore ? userInfos.todayScore : userInfos.score
     this.keyData = keyData
   }
 }
