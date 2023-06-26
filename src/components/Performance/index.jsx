@@ -3,12 +3,11 @@ import { RadarChart, PolarGrid, PolarAngleAxis, Radar } from 'recharts'
 
 const Performance = ({ data }) => (
   <div>
-    <h2>Performance</h2>
     <RadarChart outerRadius={90} width={730} height={250} data={data}>
       <PolarGrid />
       <PolarAngleAxis dataKey="kind" />
       <Radar
-        name="Mike"
+        name="Performances"
         dataKey="value"
         stroke="#8884d8"
         fill="#8884d8"

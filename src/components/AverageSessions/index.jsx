@@ -3,7 +3,7 @@ import { LineChart, Line, XAxis, YAxis, Tooltip } from 'recharts'
 
 const AverageSessions = ({ data }) => (
   <div>
-    <h2>Sessions moyennes</h2>
+    <h2>Durée moyenne des sessions</h2>
     <LineChart width={500} height={300} data={data}>
       <XAxis dataKey="day" />
       <YAxis />

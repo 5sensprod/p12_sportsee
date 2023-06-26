@@ -4,19 +4,16 @@ import {
   fetchUser,
   fetchPerformance,
   fetchAverageSessions,
-  fetchActivity,
 } from '../../services/serviceApi'
 import Card from '../Card'
 import Score from '../Score'
 import Performance from '../Performance'
 import AverageSessions from '../AverageSessions'
-import Activity from '../Activity'
 
 const User = () => {
   const [user, setUser] = useState(null)
   const [performance, setPerformance] = useState(null)
   const [averageSessions, setAverageSessions] = useState(null)
-  const [activity, setActivity] = useState(null)
   const { id } = useParams()
   const navigate = useNavigate()
 
@@ -32,10 +29,6 @@ const User = () => {
     fetchAverageSessions(id)
       .then((averageSessionsData) => setAverageSessions(averageSessionsData))
       .catch(() => navigate('/not-found'))
-
-    fetchActivity(id)
-      .then((activityData) => setActivity(activityData))
-      .catch(() => navigate('/not-found'))
   }, [id, navigate])
 
   return (
@@ -49,7 +42,6 @@ const User = () => {
           {averageSessions && (
             <AverageSessions data={averageSessions.sessions} />
           )}
-          {activity && <Activity data={activity.sessions} />}
         </div>
       ) : (
         <p>Chargement...</p>
