@@ -2,6 +2,8 @@ import user12 from './user12.json'
 import user18 from './user18.json'
 import performance12 from './performance12.json'
 import performance18 from './performance18.json'
+import averageSessions12 from './averageSessions12.json'
+import averageSessions18 from './averageSessions18.json'
 
 export const userData = {
   12: user12.data,
@@ -11,4 +13,9 @@ export const userData = {
 export const performanceData = {
   12: performance12.data,
   18: performance18.data,
+}
+
+export const averageSessionsData = {
+  12: averageSessions12.data,
+  18: averageSessions18.data,
 }
