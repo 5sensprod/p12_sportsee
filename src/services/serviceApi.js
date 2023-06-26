@@ -1,10 +1,15 @@
-import { userData, performanceData, averageSessionsData } from '../api/mockData'
+import {
+  userData,
+  performanceData,
+  averageSessionsData,
+  activityData,
+} from '../api/mockData'
 import UserModel from '../models/UserModel'
 import PerformanceModel from '../models/PerformanceModel'
-import AverageSessionsModel from '../models/AverageSessionModel'
+import AverageSessionsModel from '../models/AverageSessionsModel'
+import ActivityModel from '../models/ActivityModel'
 
 export const fetchUser = (id) => {
-  // utilise l'ID pour récupérer les bonnes données
   const data = userData[id]
   return Promise.resolve(new UserModel(data))
 }
@@ -17,4 +22,9 @@ export const fetchPerformance = (userId) => {
 export const fetchAverageSessions = (userId) => {
   const data = averageSessionsData[userId]
   return Promise.resolve(new AverageSessionsModel(data))
+}
+
+export const fetchActivity = (userId) => {
+  const data = activityData[userId]
+  return Promise.resolve(new ActivityModel(data))
 }
