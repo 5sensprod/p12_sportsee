@@ -1,0 +1,8 @@
+.userName {
+    color: rgb(255, 0, 0);
+}
+
+.title,
+.userName {
+    text-transform: capitalize;
+}

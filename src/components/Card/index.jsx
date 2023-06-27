@@ -30,8 +30,8 @@ const Card = ({ keyData }) => (
         <div className={styles.card} key={key}>
           <img src={keyMap[key].image} alt={keyMap[key].label} />
           <div>
-            <h2>{keyMap[key].label}</h2>
-            <p>{`${keyData[key]} ${keyMap[key].unit}`}</p>
+            <h2>{`${keyData[key]}${keyMap[key].unit}`}</h2>
+            <p>{keyMap[key].label}</p>
           </div>
         </div>
       )
