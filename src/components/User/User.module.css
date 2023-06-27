@@ -1,8 +1,15 @@
 .userName {
     color: rgb(255, 0, 0);
+    text-transform: capitalize;
 }
 
 .title,
 .userName {
-    text-transform: capitalize;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.subline {
+    font-size: 18px;
+    font-weight: 400;
 }

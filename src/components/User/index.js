@@ -46,7 +46,9 @@ const User = () => {
           <h1 className={styles.title}>
             Bonjour <span className={styles.userName}>{user.firstName}</span>
           </h1>
-          <span>Félicitation ! Vous avez explosé vos objectifs hier 👏</span>
+          <span className={styles.subline}>
+            Félicitation ! Vous avez explosé vos objectifs hier 👏
+          </span>
           <Card keyData={user.keyData} />
           <Score score={user.score} />
           {performance && <Performance data={performance.data} />}
