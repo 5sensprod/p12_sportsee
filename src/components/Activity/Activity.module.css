@@ -1,49 +1,46 @@
-/* Activity.module.css */
-
 .container {
-    position: relative;
-    height: 100%;
-    background: #f8f9fa; /* remplacer par la couleur que vous voulez */
-  }
-  
-  .chartTitle {
-    position: absolute;
-    top: 1.5rem;
-    left: 2rem;
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  
-  .chartLegend {
-    display: flex;
-    position: absolute;
-    top: 1.5rem;
-    right: 2rem;
-    color: #6c757d; /* remplacer par la couleur que vous voulez */
-  }
-  
-  .legendDetail {
-    margin: 0 0 0 2rem;
-  }
-  
-  .colorBullet {
-    display: inline-block;
-    width: 0.5rem;
-    height: 0.5rem;
-    margin: 0 0.5rem 0 0;
-    border-radius: 50%;
-  }
-  
-  .tooltipContainer {
-    border: 2px solid rgba(255, 255, 255, 0.3);
-  }
-  
-  .tooltipLine {
-    padding: 0.75rem;
-    margin: 0;
-    color: white;
-    font-size: 0.7rem;
-    font-weight: 500;
-  }
-  
+  position: relative;
+  height: 100%;
+  background: #f8f9fa;
+}
+
+.chartTitle {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.chartLegend {
+  display: flex;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  color: #6c757d;
+}
+
+.legendDetail {
+  margin: 0 0 0 2rem;
+}
+
+.colorBullet {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0 0.5rem 0 0;
+  border-radius: 50%;
+}
+
+.tooltipContainer {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.tooltipLine {
+  padding: 0.75rem;
+  margin: 0;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 500;
+}

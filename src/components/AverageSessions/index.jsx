@@ -34,7 +34,11 @@ const AverageSessions = ({ data }) => (
           tickLine={false}
           tick={{ fill: 'white' }}
         />
-        <YAxis hide={true} />
+        <YAxis
+          dataKey="sessionLength"
+          domain={[40, 'dataMax + 20']}
+          hide={true}
+        />
         <Tooltip content={<CustomTooltip />} />
         <Line
           type="monotone"

@@ -4,9 +4,9 @@
     height: 263px;
     background: #FBFBFB;
     border-radius: 5px;
-  }
-  
-  .scoreTitle {
+}
+
+.scoreTitle {
     position: absolute;
     left: 20%;
     top: 15%;
@@ -16,9 +16,9 @@
     line-height: 24px;
     color: #20253a;
     font-weight: 700;
-  }
-  
-  .scoreText {
+}
+
+.scoreText {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -31,10 +31,10 @@
     background: #FBFBFB;
     border-radius: 50%;
     padding: 2.3rem 2.7rem;
-  }
-  
-  .scoreNumber {
+}
+
+.scoreNumber {
     color: rgba(0, 0, 0, 0.8);
     font-weight: 700;
     font-size: 26px;
-  }
+}
