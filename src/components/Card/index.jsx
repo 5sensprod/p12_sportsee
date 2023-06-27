@@ -26,11 +26,20 @@ const Card = ({ keyData }) => (
         return null
       }
 
+      // Si la clé est 'calorieCount', convertit le nombre en Kcal et format de milliers
+      const value =
+        key === 'calorieCount'
+          ? (keyData[key] / 1000).toLocaleString('fr-FR', {
+              minimumFractionDigits: 3,
+              maximumFractionDigits: 3,
+            })
+          : keyData[key]
+
       return (
         <div className={styles.card} key={key}>
           <img src={keyMap[key].image} alt={keyMap[key].label} />
           <div>
-            <h2>{`${keyData[key]}${keyMap[key].unit}`}</h2>
+            <h2>{`${value} ${keyMap[key].unit}`}</h2>
             <p>{keyMap[key].label}</p>
           </div>
         </div>
