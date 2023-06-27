@@ -1,0 +1,28 @@
+.card {
+    display: flex;
+    padding: 2em;
+    width: 258px;
+    height: 124px;
+    background: #FBFBFB;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Pour créer un espace entre les cartes */
+  }
+  
+  .card h2 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #282D30;
+    margin-bottom: 2px;
+  }
+  
+  .card p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #74798C;
+  }
+  
+  .card img {
+    margin-left: 24px;
+  }
