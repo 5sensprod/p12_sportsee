@@ -1,5 +1,5 @@
 import React from 'react'
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts'
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
 import styles from './Score.module.css'
 
 const Score = ({ score }) => {
@@ -19,14 +19,13 @@ const Score = ({ score }) => {
             cy="50%"
             innerRadius={70}
             outerRadius={85}
-            paddingAngle={5}
+            endAngle={450}
             dataKey="value"
             startAngle={90}
           >
-            <Cell fill="#ff0000" />
+            <Cell fill="#ff0000" cornerRadius={10} />
             <Cell fill="#FBFBFB" />
           </Pie>
-          <Tooltip />
         </PieChart>
       </ResponsiveContainer>
       <p className={styles.scoreText}>

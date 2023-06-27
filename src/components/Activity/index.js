@@ -1,6 +1,6 @@
 import React from 'react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
-import styles from './Activity.module.css' // Assurez-vous que le chemin est correct
+import styles from './Activity.module.css'
 
 // Création d'un Tooltip personnalisé pour afficher les unités
 const CustomTooltip = ({ active, payload }) => {
@@ -9,7 +9,7 @@ const CustomTooltip = ({ active, payload }) => {
       <div className={styles.tooltipContainer}>
         <p
           className={styles.tooltipLine}
-          style={{ background: '#343a40' }}
+          style={{ background: '#ff0101' }}
         >{`Poids: ${payload[0].value}kg`}</p>
         <p
           className={styles.tooltipLine}
@@ -25,7 +25,7 @@ const CustomTooltip = ({ active, payload }) => {
 const Activity = ({ data }) => {
   if (!data) return null
 
-  // Ajoutez une nouvelle propriété pour le numéro du jour
+  // Ajoute une nouvelle propriété pour le numéro du jour
   const dataWithDayNumber = data.map((item, index) => ({
     ...item,
     dayNumber: index + 1,
@@ -33,27 +33,29 @@ const Activity = ({ data }) => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.chartTitle}>Activité quotidienne</h2>
+      <div className={styles.head}>
+        <h2 className={styles.chartTitle}>Activité quotidienne</h2>
 
-      <div className={styles.chartLegend}>
-        <p className={styles.legendDetail}>
-          <span
-            className={styles.colorBullet}
-            style={{ background: '#343a40' }}
-          ></span>
-          Poids (kg)
-        </p>
-        <p className={styles.legendDetail}>
-          <span
-            className={styles.colorBullet}
-            style={{ background: '#ff0101' }}
-          ></span>
-          Calories brûlées (kCal)
-        </p>
+        <div className={styles.chartLegend}>
+          <p className={styles.legendDetail}>
+            <span
+              className={styles.icon}
+              style={{ background: '#282D30' }}
+            ></span>
+            <span className={styles.text}>Poids (kg)</span>
+          </p>
+          <p className={styles.legendDetail}>
+            <span
+              className={styles.icon}
+              style={{ background: '#E60000' }}
+            ></span>
+            <span className={styles.text}>Calories brûlées (kCal)</span>
+          </p>
+        </div>
       </div>
 
       <BarChart
-        width={500}
+        width={850}
         height={300}
         data={dataWithDayNumber}
         margin={{
@@ -66,7 +68,7 @@ const Activity = ({ data }) => {
         barCategoryGap="35%"
       >
         <CartesianGrid
-          strokeDasharray="3 3"
+          strokeDasharray="2 2"
           vertical={false}
           stroke="#ced4da"
         />

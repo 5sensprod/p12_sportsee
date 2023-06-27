@@ -1,36 +1,48 @@
 .container {
-  position: relative;
-  height: 100%;
-  background: #f8f9fa;
+  margin-bottom: 2em;
+  height: 320px;
+  width: 835px;
+  border-radius: 5px;
+  background: #FBFBFB;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+  padding: 25px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  margin-right: 1.5rem;
 }
 
 .chartTitle {
-  position: absolute;
-  top: 1.5rem;
-  left: 2rem;
-  margin: 0;
-  font-size: 1rem;
+  font-size: 15px;
+  line-height: 24px;
+  color: #20253A;
+}
+
+.text {
   font-weight: 500;
+  font-size: 14px;
+  color: #74798c;
+  margin-left: 10px;
+}
+
+.icon {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  align-self: center;
+  margin-left: 30px;
 }
 
 .chartLegend {
   display: flex;
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-  color: #6c757d;
 }
 
 .legendDetail {
-  margin: 0 0 0 2rem;
-}
-
-.colorBullet {
-  display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-  margin: 0 0.5rem 0 0;
-  border-radius: 50%;
+  display: flex;
+  align-items: center;
 }
 
 .tooltipContainer {
