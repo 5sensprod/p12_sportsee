@@ -1,8 +1,11 @@
 .asideNavContainer {
-    display: grid;
-    grid-template-rows: 3fr 2fr;
+    display: flex;
     color: white;
     background: #000000;
+    flex-direction: column;
+    width: 117px;
+    justify-content: center;
+    align-items: center;
 }
 
 .activitiesList {
