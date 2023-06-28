@@ -1,16 +1,16 @@
 import React from 'react'
 import Header from '../Header'
-import Footer from '../Footer'
+import ActivityNav from '../ActivityNav'
 import styles from './Layout.module.css'
 
 function Layout({ children }) {
   return (
     <>
+      <Header />
       <div className={styles.layoutContainer}>
-        <Header />
+        <ActivityNav />
         {children}
       </div>
-      <Footer />
     </>
   )
 }

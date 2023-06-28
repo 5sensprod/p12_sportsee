@@ -1,0 +1,26 @@
+.asideNavContainer {
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+    color: white;
+    background: #000000;
+}
+
+.activitiesList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.activityPicto {
+    padding: 0.5rem;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+    font-size: 0.8rem;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
