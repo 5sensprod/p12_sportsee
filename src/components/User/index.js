@@ -40,7 +40,7 @@ const User = () => {
   }, [id, navigate])
 
   return (
-    <div>
+    <section>
       {user ? (
         <div>
           <h1 className={styles.title}>
@@ -49,18 +49,26 @@ const User = () => {
           <span className={styles.subline}>
             Félicitation ! Vous avez explosé vos objectifs hier 👏
           </span>
-          <Card keyData={user.keyData} />
-          <Score score={user.score} />
-          {performance && <Performance data={performance.data} />}
-          {averageSessions && (
-            <AverageSessions data={averageSessions.sessions} />
-          )}
-          {activity && <Activity data={activity.sessions} />}
+          <div className={styles.container}>
+            <div className={styles.containerChart}>
+              {activity && <Activity data={activity.sessions} />}
+              <div className={styles.squareChart}>
+                <Score score={user.score} />
+                {performance && <Performance data={performance.data} />}
+                {averageSessions && (
+                  <AverageSessions data={averageSessions.sessions} />
+                )}
+              </div>
+            </div>
+            <div className={styles.containerCards}>
+              <Card keyData={user.keyData} />
+            </div>
+          </div>
         </div>
       ) : (
         <p>Chargement...</p>
       )}
-    </div>
+    </section>
   )
 }
 

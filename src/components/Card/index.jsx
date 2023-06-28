@@ -18,7 +18,7 @@ const keyMap = {
 }
 
 const Card = ({ keyData }) => (
-  <div>
+  <>
     {Object.keys(keyData).map((key) => {
       // Vérifie si la clé existe dans keyMap
       if (!keyMap.hasOwnProperty(key)) {
@@ -45,7 +45,7 @@ const Card = ({ keyData }) => (
         </div>
       )
     })}
-  </div>
+  </>
 )
 
 export default Card

@@ -1,3 +1,7 @@
+.title {
+    margin-bottom: 41px;
+}
+
 .userName {
     color: rgb(255, 0, 0);
     text-transform: capitalize;
@@ -12,4 +16,32 @@
 .subline {
     font-size: 18px;
     font-weight: 400;
+}
+
+.containerChart {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.containerCards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.squareChart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    gap: 31px;
+    margin-top: 77px;
+}
+
+section {
+    padding: 68px 107px;
 }
