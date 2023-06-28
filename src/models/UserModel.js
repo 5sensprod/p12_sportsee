@@ -1,10 +1,10 @@
 class UserModel {
-  constructor({ id, userInfos, todayScore, score, keyData }) {
+  constructor({ id, userInfos, score, todayScore, keyData }) {
     this.id = id
     this.firstName = userInfos.firstName
     this.lastName = userInfos.lastName
     this.age = userInfos.age
-    this.score = userInfos.todayScore || userInfos.score || todayScore || score
+    this.score = score || todayScore // accept both 'score' and 'todayScore'
     this.keyData = keyData
   }
 }

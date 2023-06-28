@@ -1,5 +1,4 @@
 import {
-  userData,
   performanceData,
   averageSessionsData,
   activityData,
@@ -11,16 +10,21 @@ import ActivityModel from '../models/ActivityModel'
 
 export const fetchUser = async (id) => {
   if (process.env.REACT_APP_USE_MOCK_DATA === 'true') {
-    const data = userData[id]
-    if (!data) {
-      throw new Error(`No user with id ${id}`)
+    try {
+      const dataModule = await import(`../api/user${id}.json`) // dynamic import
+      const data = dataModule[id]
+      if (!data) {
+        throw new Error(`No user with id ${id}`)
+      }
+      return new UserModel(data.data)
+    } catch (error) {
+      console.error('Failed to fetch user data', error)
+      throw error
     }
-    return new UserModel(data)
   } else {
     try {
       const response = await fetch(`http://localhost:5000/user/${id}`)
       const data = await response.json()
-      // console.log('fetchUser data:', data)
       return new UserModel(data.data)
     } catch (error) {
       console.error('Failed to fetch user data', error)
