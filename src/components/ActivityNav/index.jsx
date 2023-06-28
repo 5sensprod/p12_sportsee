@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import styles from './ActivityNav.module.css'
 import iconDumbBell from '../../assets/iconDumbBell.svg'
 import iconBike from '../../assets/iconBike.svg'
@@ -7,45 +8,47 @@ import iconSwiming from '../../assets/iconSwiming.svg'
 
 const ActivityNav = () => {
   const currentYear = new Date().getFullYear()
+  const location = useLocation()
+
   return (
     <div className={styles.asideNavContainer}>
       <nav>
         <ul className={styles.activitiesList}>
           <li>
-            <a href="/">
+            <Link to={location.pathname}>
               <img
                 className={styles.activityPicto}
                 src={iconMeditation}
                 alt="Méditation"
               />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to={location.pathname}>
               <img
                 className={styles.activityPicto}
                 src={iconSwiming}
                 alt="Natation"
               />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to={location.pathname}>
               <img
                 className={styles.activityPicto}
                 src={iconBike}
                 alt="Cyclisme"
               />
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to={location.pathname}>
               <img
                 className={styles.activityPicto}
                 src={iconDumbBell}
                 alt="Musculation"
               />
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
