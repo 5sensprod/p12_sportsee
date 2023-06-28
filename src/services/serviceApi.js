@@ -1,3 +1,5 @@
+// services/serviceApi.js
+import { fetchData } from '../api/apiHelper'
 import {
   performanceData,
   averageSessionsData,
@@ -9,28 +11,10 @@ import AverageSessionsModel from '../models/AverageSessionsModel'
 import ActivityModel from '../models/ActivityModel'
 
 const API_BASE_URL = 'http://localhost:5000/user/'
-
-const fetchData = async (userId, resource, Model, mockData) => {
-  if (process.env.REACT_APP_USE_MOCK_DATA === 'true') {
-    const data = mockData[userId]
-    if (!data) {
-      throw new Error(`No ${resource} data for user ${userId}`)
-    }
-    return new Model(data)
-  } else {
-    try {
-      const response = await fetch(`${API_BASE_URL}${userId}/${resource}`)
-      const data = await response.json()
-      return new Model(data.data)
-    } catch (error) {
-      console.error(`Failed to fetch ${resource} data`, error)
-      throw error
-    }
-  }
-}
+const USE_MOCK_DATA = process.env.REACT_APP_USE_MOCK_DATA === 'true'
 
 export const fetchUser = async (id) => {
-  if (process.env.REACT_APP_USE_MOCK_DATA === 'true') {
+  if (USE_MOCK_DATA) {
     try {
       const dataModule = await import(`../api/user${id}.json`) // dynamic import
       const data = dataModule[id]
@@ -55,7 +39,14 @@ export const fetchUser = async (id) => {
 }
 
 export const fetchPerformance = async (userId) => {
-  return fetchData(userId, 'performance', PerformanceModel, performanceData)
+  return fetchData(
+    userId,
+    'performance',
+    PerformanceModel,
+    performanceData,
+    API_BASE_URL,
+    USE_MOCK_DATA
+  )
 }
 
 export const fetchAverageSessions = async (userId) => {
@@ -63,10 +54,19 @@ export const fetchAverageSessions = async (userId) => {
     userId,
     'average-sessions',
     AverageSessionsModel,
-    averageSessionsData
+    averageSessionsData,
+    API_BASE_URL,
+    USE_MOCK_DATA
   )
 }
 
 export const fetchActivity = async (userId) => {
-  return fetchData(userId, 'activity', ActivityModel, activityData)
+  return fetchData(
+    userId,
+    'activity',
+    ActivityModel,
+    activityData,
+    API_BASE_URL,
+    USE_MOCK_DATA
+  )
 }
