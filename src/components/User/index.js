@@ -12,6 +12,7 @@ import Performance from '../Performance'
 import AverageSessions from '../AverageSessions'
 import Activity from '../Activity'
 import styles from './User.module.css'
+import Loader from '../Loader'
 
 const User = () => {
   const [user, setUser] = useState(null)
@@ -22,20 +23,20 @@ const User = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetchUser(id)
-      .then((userData) => setUser(userData))
-      .catch(() => navigate('/not-found'))
-
-    fetchPerformance(id)
-      .then((performanceData) => setPerformance(performanceData))
-      .catch(() => navigate('/not-found'))
-
-    fetchAverageSessions(id)
-      .then((averageSessionsData) => setAverageSessions(averageSessionsData))
-      .catch(() => navigate('/not-found'))
-
-    fetchActivity(id)
-      .then((activityData) => setActivity(activityData))
+    Promise.all([
+      fetchUser(id),
+      fetchPerformance(id),
+      fetchAverageSessions(id),
+      fetchActivity(id),
+    ])
+      .then(
+        ([userData, performanceData, averageSessionsData, activityData]) => {
+          setUser(userData)
+          setPerformance(performanceData)
+          setAverageSessions(averageSessionsData)
+          setActivity(activityData)
+        }
+      )
       .catch(() => navigate('/not-found'))
   }, [id, navigate])
 
@@ -53,11 +54,11 @@ const User = () => {
             <div className={styles.containerChart}>
               {activity && <Activity data={activity.sessions} />}
               <div className={styles.squareChart}>
-                <Score score={user.score} />
-                {performance && <Performance data={performance.data} />}
                 {averageSessions && (
                   <AverageSessions data={averageSessions.sessions} />
                 )}
+                {performance && <Performance data={performance.data} />}
+                <Score score={user.score} />
               </div>
             </div>
             <div className={styles.containerCards}>
@@ -66,7 +67,7 @@ const User = () => {
           </div>
         </div>
       ) : (
-        <p>Chargement...</p>
+        <Loader />
       )}
     </section>
   )
