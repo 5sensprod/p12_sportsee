@@ -20,7 +20,7 @@ export const fetchUser = async (id) => {
     try {
       const response = await fetch(`http://localhost:5000/user/${id}`)
       const data = await response.json()
-      console.log('fetchUser data:', data)
+      // console.log('fetchUser data:', data)
       return new UserModel(data.data)
     } catch (error) {
       console.error('Failed to fetch user data', error)
