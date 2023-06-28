@@ -6,11 +6,7 @@
     width: 117px;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0px;
-    left: 0px;
     height: 100vh;
-    z-index: -1;
 }
 
 .activitiesList {

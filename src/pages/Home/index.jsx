@@ -1,10 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import styles from './Home.module.css'
 
 function Home() {
   return (
-    <div>
-      <h1>Bienvenue sur la page d'accueil!</h1>
-    </div>
+    <main>
+      <h1 className={styles.title}>Bonjour</h1>
+      <Link to="/user/12">Voir l'utilisateur 12</Link>
+      <br />
+      <Link to="/user/18">Voir l'utilisateur 18</Link>
+    </main>
   )
 }
 
