@@ -1,17 +1,24 @@
 .logo img {
-    width: 178px;
-    height: 61px;
-    margin-right: 149px;
-    margin-left: 28px;
-  }
+  width: 178px;
+  height: 61px;
+  margin-right: 149px;
+  margin-left: 28px;
+  transition: width 0.3s ease-in-out;
+}
 
-  .logo {
-    display: flex;
-    -moz-box-align: center;
-    align-items: center;
-    min-height: 91px;
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-    cursor: pointer;
+.logo {
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  min-height: 91px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-height: 882px) {
+  .logo img {
+    width: 108px;
   }
+}

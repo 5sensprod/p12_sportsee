@@ -1,21 +1,20 @@
 .title {
+    font-size: 48px;
+    font-weight: 500;
     margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
 }
 
 .userName {
     color: rgb(255, 0, 0);
-    text-transform: capitalize;
-}
-
-.title,
-.userName {
-    font-size: 48px;
     font-weight: 500;
+    transition: all 0.3s ease-in-out;
 }
 
 .subline {
     font-size: 18px;
     font-weight: 400;
+    transition: font-size 0.3s ease-in-out;
 }
 
 .containerChart {
@@ -40,13 +39,13 @@
     display: flex;
     gap: 31px;
     margin-top: 77px;
-    transition: gap 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 section {
     margin-top: 46px;
     margin-left: 107px;
-    transition: margin-left 0.2s ease;
+    transition: all 0.2s ease;
     margin-right: 20px;
 }
 
@@ -58,8 +57,40 @@ section {
 }
 
 @media (max-width: 1251px) {
-
     .container {
         gap: 15px;
+    }
+}
+
+@media (max-height: 1031px) {
+    .title {
+        margin-bottom: 3px;
+    }
+
+    .container {
+        margin-top: 23px;
+    }
+
+    section {
+        margin-top: 10px;
+    }
+}
+
+@media (max-height: 931px) {
+    .title {
+        margin-bottom: 3px;
+        font-size: 34px;
+    }
+
+    .subline {
+        font-size: 17px;
+    }
+
+    .container {
+        margin-top: 23px;
+    }
+
+    .userName {
+        font-size: 34px;
     }
 }

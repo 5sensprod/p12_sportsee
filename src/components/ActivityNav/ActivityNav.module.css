@@ -3,31 +3,23 @@
     color: white;
     background: #000000;
     flex-direction: column;
-    /* width: 117px; */
     justify-content: center;
     align-items: center;
     position: sticky;
     top: 91px;
-    /* min-width: 60px; */
 }
 
 .activitiesList {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* height: 100%; */
-    /* width: 100%; */
-    /* min-width: 55px; */
 }
 
 .activityPicto {
     padding: 0.5rem;
-    /* width: 100%; */
     width: 64px;
     transition: width 0.3s ease;
 }
-
-
 
 .footer {
     display: flex;
@@ -38,14 +30,6 @@
     transform: rotate(180deg);
 }
 
-/* section {
-    margin-top: 46px;
-    margin-left: 107px;
-    transition: margin-left 0.3s ease-in-out;
-    margin-right: 20px;
-} */
-
-/* Ajuste la marge lorsque la largeur de la fenêtre est inférieure à 1405px */
 @media (max-width: 1286px) {
     .activityPicto {
         width: 40px;
