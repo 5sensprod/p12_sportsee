@@ -5,15 +5,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: sticky;
-    top: 91px;
+    /* position: absolute; */
+    padding: 0 18px;
+    transition: all 0.3s ease;
+    /* height: 100vh;  */
+    max-height: 100vh;
 }
 
-.activitiesList {
+/* .activitiesList {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+} */
 
 .activityPicto {
     padding: 0.5rem;
@@ -34,4 +37,16 @@
     .activityPicto {
         width: 40px;
     }
+    .asideNavContainer {
+        width: 47px;
+        padding: 0 5px;
+    }
+    
 }
+
+@media (max-height: 882px) {
+    /* .asideNavContainer {
+
+       
+    } */
+  }

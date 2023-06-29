@@ -1,11 +1,11 @@
 import React from 'react'
+import { useSpring, animated } from 'react-spring'
 import caloriesImage from '../../assets/calories-icon.svg'
 import proteinsImage from '../../assets/proteines-icon.svg'
 import carbohydratesImage from '../../assets/glucides-icon.svg'
 import lipidsImage from '../../assets/lipides-icon.svg'
 import styles from './Card.module.css'
 
-// Mappage des clés, des unités et des images
 const keyMap = {
   calorieCount: { label: 'Calories', unit: 'Kcal', image: caloriesImage },
   proteinCount: { label: 'Protéines', unit: 'g', image: proteinsImage },
@@ -17,35 +17,50 @@ const keyMap = {
   lipidCount: { label: 'Lipides', unit: 'g', image: lipidsImage },
 }
 
-const Card = ({ keyData }) => (
-  <>
-    {Object.keys(keyData).map((key) => {
-      // Vérifie si la clé existe dans keyMap
-      if (!keyMap.hasOwnProperty(key)) {
-        console.warn(`La clé ${key} n'existe pas dans keyMap.`)
-        return null
-      }
+const Card = ({ keyData }) => {
+  const AnimatedNumber = ({ value, unit }) => {
+    const springProps = useSpring({
+      number: value,
+      from: { number: 0 },
+      config: { tension: 80, friction: 20 },
+    })
 
-      // Si la clé est 'calorieCount', convertit le nombre en Kcal et format de milliers
-      const value =
-        key === 'calorieCount'
-          ? (keyData[key] / 1000).toLocaleString('fr-FR', {
-              minimumFractionDigits: 3,
-              maximumFractionDigits: 3,
-            })
-          : keyData[key]
+    return (
+      <animated.h2>
+        {springProps.number.interpolate((val) =>
+          unit === 'Kcal'
+            ? `${(val / 1000).toLocaleString('fr-FR', {
+                minimumFractionDigits: 3,
+                maximumFractionDigits: 3,
+              })} ${unit}`
+            : `${Math.round(val)} ${unit}`
+        )}
+      </animated.h2>
+    )
+  }
 
-      return (
-        <div className={styles.card} key={key}>
-          <img src={keyMap[key].image} alt={keyMap[key].label} />
-          <div>
-            <h2>{`${value} ${keyMap[key].unit}`}</h2>
-            <p>{keyMap[key].label}</p>
+  return (
+    <>
+      {Object.keys(keyData).map((key) => {
+        if (!keyMap.hasOwnProperty(key)) {
+          console.warn(`La clé ${key} n'existe pas dans keyMap.`)
+          return null
+        }
+
+        const value = keyData[key]
+
+        return (
+          <div className={styles.card} key={key}>
+            <img src={keyMap[key].image} alt={keyMap[key].label} />
+            <div>
+              <AnimatedNumber value={value} unit={keyMap[key].unit} />
+              <p>{keyMap[key].label}</p>
+            </div>
           </div>
-        </div>
-      )
-    })}
-  </>
-)
+        )
+      })}
+    </>
+  )
+}
 
 export default Card
