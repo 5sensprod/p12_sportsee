@@ -40,8 +40,26 @@
     display: flex;
     gap: 31px;
     margin-top: 77px;
+    transition: gap 0.3s ease-in-out;
 }
 
 section {
-    margin: 46px 107px;
+    margin-top: 46px;
+    margin-left: 107px;
+    transition: margin-left 0.2s ease;
+    margin-right: 20px;
+}
+
+/* Ajuste la marge lorsque la largeur de la fenêtre est inférieure à 1405px */
+@media (max-width: 1440px) {
+    section {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 1251px) {
+
+    .container {
+        gap: 15px;
+    }
 }

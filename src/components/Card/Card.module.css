@@ -3,10 +3,11 @@
   align-items: center;
   padding: 2em;
   width: 258px;
-  height: 124px;
   background: #FBFBFB;
   border-radius: 5px;
   box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+  gap: 24px;
 }
 
 .card h2 {
@@ -15,6 +16,8 @@
   line-height: 24px;
   color: #282D30;
   margin-bottom: 2px;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
 }
 
 .card p {
@@ -24,6 +27,36 @@
   color: #74798C;
 }
 
-.card img {
+/* .card img {
   margin-right: 24px;
+} */
+
+
+@media (max-width: 1200px) {
+  .card {
+    padding-left: unset;
+    padding: 1em;
+    flex-direction: column;
+    height: 160px;
+    text-align: center;
+  }
+
+  .card h2 {
+    white-space: inherit;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 1252px) {
+  .card {
+    gap: 14px;
+    padding-left: 1em;
+    width: auto;
+  }
+}
+
+@media (max-width: 1044px) {
+  .card {
+    padding: 5px;
+  }
 }

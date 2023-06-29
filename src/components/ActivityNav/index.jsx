@@ -14,7 +14,7 @@ const ActivityNav = () => {
     <div className={styles.asideNavContainer}>
       <nav>
         <ul className={styles.activitiesList}>
-          <li>
+          <li className={styles.activitiesLink}>
             <Link to={location.pathname}>
               <img
                 className={styles.activityPicto}
