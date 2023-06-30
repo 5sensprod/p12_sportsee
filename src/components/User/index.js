@@ -6,7 +6,7 @@ import {
   fetchAverageSessions,
   fetchActivity,
 } from '../../services/serviceApi'
-import Card from '../Card'
+import CardList from '../Card/CardList'
 import Score from '../Score'
 import Performance from '../Performance'
 import AverageSessions from '../AverageSessions'
@@ -62,7 +62,7 @@ const User = () => {
               </div>
             </div>
             <div className={styles.containerCards}>
-              <Card keyData={user.keyData} />
+              <CardList keyData={user.keyData} />
             </div>
           </div>
         </div>
