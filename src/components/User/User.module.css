@@ -49,7 +49,6 @@ section {
     margin-right: 20px;
 }
 
-/* Ajuste la marge lorsque la largeur de la fenêtre est inférieure à 1405px */
 @media (max-width: 1440px) {
     section {
         margin-left: 15px;

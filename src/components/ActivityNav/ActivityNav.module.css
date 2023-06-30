@@ -35,13 +35,6 @@ nav {
     }
 
     .asideNavContainer {
-        /* width: 47px; */
         padding: 0 5px;
     }
-
-}
-
-@media (max-height: 882px) {
-    /* .asideNavContainer {
-    } */
 }

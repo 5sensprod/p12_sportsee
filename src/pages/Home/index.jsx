@@ -7,7 +7,7 @@ function Home() {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
-    const userIds = [12, 18] // les IDs des utilisateurs que vous voulez afficher
+    const userIds = [12, 18] // les IDs des utilisateurs à afficher
 
     Promise.all(userIds.map((id) => fetchUser(id)))
       .then(setUsers)

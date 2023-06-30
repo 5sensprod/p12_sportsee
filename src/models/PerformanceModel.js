@@ -13,7 +13,7 @@ class PerformanceModel {
     this.kind = kind
     this.data = data.map((d) => ({
       ...d,
-      kind: kindMap[kind[d.kind]] || kind[d.kind], // Utiliser la traduction s'il y en a une, sinon utiliser la valeur originale
+      kind: kindMap[kind[d.kind]] || kind[d.kind], // Utilise la traduction s'il y en a une, sinon utiliser la valeur originale
     }))
   }
 }
