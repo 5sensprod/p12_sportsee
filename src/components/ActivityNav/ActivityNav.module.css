@@ -3,18 +3,16 @@
     color: white;
     background: #000000;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 0 18px;
     transition: all 0.3s ease;
     min-height: 100%;
 }
 
-/* .activitiesList {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
+nav {
+    margin: auto;
+}
 
 .activityPicto {
     padding: 0.5rem;

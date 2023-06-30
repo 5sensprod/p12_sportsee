@@ -1,9 +1,9 @@
 .nav {
   display: flex;
   padding-right: 68px;
-  /* gap: 80px; */
   justify-content: space-between;
   width: 100%;
+
 }
 
 .nav ul {
@@ -13,6 +13,7 @@
   max-width: 994px;
   min-width: 500px;
   width: 100%;
+
 }
 
 .nav li {

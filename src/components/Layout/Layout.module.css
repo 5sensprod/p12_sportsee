@@ -1,10 +1,12 @@
 .layoutContainer {
     display: flex;
+    height: calc(100vh - 91px);
+    /* 91px est la hauteur du Header */
+
 }
 
-/* @media screen and (max-width: 768px) {
+@media screen and (max-height: 882px) {
     .layoutContainer {
-        margin: 20px auto 16px auto;
-        padding: 0 20px;
+        height: calc(100vh - 60px);
     }
-} */
+}
