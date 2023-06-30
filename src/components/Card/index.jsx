@@ -46,9 +46,7 @@ const Card = ({ keyData }) => {
           console.warn(`La clé ${key} n'existe pas dans keyMap.`)
           return null
         }
-
         const value = keyData[key]
-
         return (
           <div className={styles.card} key={key}>
             <img src={keyMap[key].image} alt={keyMap[key].label} />

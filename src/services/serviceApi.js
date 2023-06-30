@@ -9,7 +9,7 @@ import PerformanceModel from '../models/PerformanceModel'
 import AverageSessionsModel from '../models/AverageSessionsModel'
 import ActivityModel from '../models/ActivityModel'
 
-const API_BASE_URL = 'http://localhost:5000/user/'
+const API_BASE_URL = 'http://localhost:3000/user/'
 const USE_MOCK_DATA = process.env.REACT_APP_USE_MOCK_DATA === 'true'
 
 export const fetchUser = async (id) => {

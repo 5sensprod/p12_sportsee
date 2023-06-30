@@ -1,10 +1,9 @@
 .nav {
-  width: 100%;
   display: flex;
-  width: 100%;
-  padding-right: 68px;
-  gap: 50px;
+  /* padding-right: 68px; */
+  /* gap: 80px; */
   justify-content: space-between;
+  width: 100%;
 }
 
 .nav ul {
