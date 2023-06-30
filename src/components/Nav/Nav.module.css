@@ -1,6 +1,6 @@
 .nav {
   display: flex;
-  /* padding-right: 68px; */
+  padding-right: 68px;
   /* gap: 80px; */
   justify-content: space-between;
   width: 100%;
@@ -10,7 +10,9 @@
   display: flex;
   -moz-box-pack: justify;
   justify-content: space-between;
-  gap: 50px;
+  max-width: 994px;
+  min-width: 500px;
+  width: 100%;
 }
 
 .nav li {
