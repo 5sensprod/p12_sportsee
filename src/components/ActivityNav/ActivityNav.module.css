@@ -23,8 +23,8 @@ nav {
 .footer {
     display: flex;
     align-items: center;
-    padding: 3rem 0;
-    font-size: 0.8rem;
+    padding-top: 3rem;
+    font-size: 12px;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
 }
