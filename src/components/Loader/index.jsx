@@ -1,6 +1,11 @@
 import React from 'react'
 import styles from './Loader.module.css'
 
+/**
+ * Loader est un composant d'affichage qui fournit un indicateur visuel
+ * pendant le chargement des données ou d'une page.
+ */
+
 const Loader = () => {
   return (
     <div className={styles.containerLoader}>

@@ -1,8 +1,15 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 import styles from './Activity.module.css'
 
-// Création d'un Tooltip personnalisé pour afficher les unités
+/**
+ * CustomTooltip est un composant qui affiche une infobulle personnalisée avec des informations sur le poids et les calories.
+ *
+ * @param {Object} props - Props du composant CustomTooltip.
+ * @param {boolean} props.active - Indique si l'infobulle est active.
+ * @param {Object[]} props.payload - Contient les informations à afficher dans l'infobulle.
+ */
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
@@ -21,6 +28,25 @@ const CustomTooltip = ({ active, payload }) => {
 
   return null
 }
+
+// Spécifie les types des props pour le composant CustomTooltip.
+CustomTooltip.propTypes = {
+  active: PropTypes.bool,
+  payload: PropTypes.array,
+}
+
+// Spécification des valeurs par défaut pour les props du composant CustomTooltip.
+CustomTooltip.defaultProps = {
+  active: false,
+  payload: [],
+}
+
+/**
+ * Activity est un composant qui affiche un graphique à barres représentant l'activité quotidienne.
+ *
+ * @param {Object} props - Props du composant Activity.
+ * @param {Object[]} props.data - Contient les informations à afficher dans le graphique.
+ */
 
 const Activity = ({ data }) => {
   if (!data) return null
@@ -118,6 +144,17 @@ const Activity = ({ data }) => {
       </BarChart>
     </div>
   )
+}
+
+// Spécifie les types des props pour le composant Activity.
+Activity.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+      kilogram: PropTypes.number,
+      calories: PropTypes.number,
+    })
+  ),
 }
 
 export default Activity

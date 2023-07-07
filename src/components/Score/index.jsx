@@ -1,6 +1,15 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
 import styles from './Score.module.css'
+
+/**
+ * Composant pour afficher le score d'un utilisateur dans un PieChart.
+ *
+ * @component
+ * @param {object} props - Les props du composant.
+ * @param {number} props.score - Le score de l'utilisateur.
+ */
 
 const Score = ({ score }) => {
   const data = [
@@ -37,6 +46,10 @@ const Score = ({ score }) => {
       </p>
     </div>
   )
+}
+
+Score.propTypes = {
+  score: PropTypes.number.isRequired,
 }
 
 export default Score

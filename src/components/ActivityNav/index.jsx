@@ -6,6 +6,13 @@ import iconBike from '../../assets/iconBike.svg'
 import iconMeditation from '../../assets/iconMeditation.svg'
 import iconSwiming from '../../assets/iconSwiming.svg'
 
+/**
+ * ActivityNav est un composant qui affiche une barre de navigation latérale
+ * contenant des liens vers différentes activités sportives et un pied de page avec copyright.
+ *
+ * @returns {JSX.Element} Le JSX du composant ActivityNav.
+ */
+
 const ActivityNav = () => {
   const currentYear = new Date().getFullYear()
   const location = useLocation()

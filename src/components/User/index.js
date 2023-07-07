@@ -14,6 +14,15 @@ import Activity from '../Activity'
 import styles from './User.module.css'
 import Loader from '../Loader'
 
+/**
+ * Ce composant représente une page utilisateur individuelle.
+ * Il récupère les informations de l'utilisateur, ses performances,
+ * ses sessions moyennes et son activité en utilisant l'API de service,
+ * puis les affiche à l'aide de plusieurs sous-composants.
+ *
+ * @component
+ */
+
 const User = () => {
   const [user, setUser] = useState(null)
   const [performance, setPerformance] = useState(null)

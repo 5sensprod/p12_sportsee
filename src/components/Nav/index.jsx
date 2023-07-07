@@ -2,6 +2,11 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import styles from './Nav.module.css'
 
+/**
+ * Nav est un composant qui affiche une barre de navigation.
+ * Il utilise l'API du navigateur pour déterminer le chemin d'accès actuel et
+ * ajuste le comportement du lien en conséquence.
+ */
 const Nav = () => {
   const location = useLocation()
 
