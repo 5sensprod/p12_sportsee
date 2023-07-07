@@ -1,4 +1,15 @@
+/**
+ * Modèle de données pour la performance d'un utilisateur.
+ */
 class PerformanceModel {
+  /**
+   * Crée une nouvelle instance du modèle Performance.
+   *
+   * @param {object} data - Les données de performance pour l'utilisateur.
+   * @param {number} data.userId - L'ID de l'utilisateur.
+   * @param {string} data.kind - Le type de performance.
+   * @param {Array} data.data - Les données de performance.
+   */
   constructor({ userId, kind, data }) {
     this.userId = userId
     // Cartographie pour la traduction

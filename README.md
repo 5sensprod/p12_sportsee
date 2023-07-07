@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Sportsee - Projet 12 d'OpenClassrooms
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Sportsee est une application développée avec React qui permet de visualiser l'activité sportive d'un utilisateur. Nous utilisons Recharts pour intégrer des graphiques représentant cette activité.
 
-In the project directory, you can run:
+## Installation
 
-### `yarn start`
+Pour installer le projet localement, suivez ces étapes :
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clonez le dépôt en utilisant `git clone https://github.com/5sensprod/sportsee.git`.
+2. Naviguez jusqu'au dossier du projet avec `cd sportsee`.
+3. Installez les dépendances en utilisant `yarn install` ou `npm install`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Variables d'Environnement
 
-### `yarn test`
+Créez un fichier `.env` à la racine du projet et définissez les variables suivantes :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `PORT=3001`: Le port sur lequel le serveur frontend sera lancé.
+- `REACT_APP_USE_MOCK_DATA`: Si cette variable est définie sur `true`, le projet utilisera des données mockées. Si elle est définie sur `false`, le projet utilisera des données provenant de l'API. L'API peut être trouvée [ici](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard).
 
-### `yarn build`
+## Lancement du projet
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Pour lancer le projet, utilisez la commande `yarn start` ou `npm start`. Assurez-vous que le backend est lancé sur le port 3000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Démo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Une version démo de l'application est disponible [ici](https://5sensprod.github.io/sportsee_mock/).
 
-### `yarn eject`
+## Contact
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Pour toute question ou problème, vous pouvez contacter [5sensprod@gmail.com](mailto:5sensprod@gmail.com).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Autres informations
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Le projet se concentre sur la version desktop, donc il n'est pas nécessaire de travailler sur la version mobile ou tablette pour l'instant. Cependant, le projet doit être lisible sur des écrans d'au moins 1024 par 780 pixels. Tous les appels HTTP sont faits en dehors des composants React, donc un service séparé a été créé pour cela. Les données de l'API sont modélisées à l'aide d'une classe spécifique pour assurer un formatage correct.

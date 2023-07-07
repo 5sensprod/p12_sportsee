@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom'
 import styles from './Home.module.css'
 import { fetchUser } from '../../services/serviceApi'
 
+/**
+ * Le composant Home affiche une liste d'utilisateurs à sélectionner.
+ *
+ * @returns {JSX.Element} La page d'accueil avec les utilisateurs disponibles.
+ */
+
 function Home() {
   const [users, setUsers] = useState([])
 

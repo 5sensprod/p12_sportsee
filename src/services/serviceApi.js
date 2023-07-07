@@ -12,6 +12,13 @@ import ActivityModel from '../models/ActivityModel'
 const API_BASE_URL = 'http://localhost:3000/user/'
 const USE_MOCK_DATA = process.env.REACT_APP_USE_MOCK_DATA === 'true'
 
+/**
+ * Récupère les données de l'utilisateur.
+ *
+ * @param {number} id - L'ID de l'utilisateur.
+ * @returns {Promise<UserModel>} Les données de l'utilisateur.
+ * @throws {Error} Si une erreur se produit lors de la récupération des données.
+ */
 export const fetchUser = async (id) => {
   if (USE_MOCK_DATA) {
     try {
@@ -37,6 +44,12 @@ export const fetchUser = async (id) => {
   }
 }
 
+/**
+ * Récupère les données de performance de l'utilisateur.
+ *
+ * @param {number} userId - L'ID de l'utilisateur.
+ * @returns {Promise<PerformanceModel>} Les données de performance de l'utilisateur.
+ */
 export const fetchPerformance = async (userId) => {
   return fetchData(
     userId,
@@ -48,6 +61,12 @@ export const fetchPerformance = async (userId) => {
   )
 }
 
+/**
+ * Récupère les données moyennes des sessions de l'utilisateur.
+ *
+ * @param {number} userId - L'ID de l'utilisateur.
+ * @returns {Promise<AverageSessionsModel>} Les données moyennes des sessions de l'utilisateur.
+ */
 export const fetchAverageSessions = async (userId) => {
   return fetchData(
     userId,
@@ -59,6 +78,12 @@ export const fetchAverageSessions = async (userId) => {
   )
 }
 
+/**
+ * Récupère les données d'activité de l'utilisateur.
+ *
+ * @param {number} userId - L'ID de l'utilisateur.
+ * @returns {Promise<ActivityModel>} Les données d'activité de l'utilisateur.
+ */
 export const fetchActivity = async (userId) => {
   return fetchData(
     userId,

@@ -4,6 +4,12 @@ import User from '../components/User'
 import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
 
+/**
+ * Le composant AppRouter définit les routes de l'application.
+ *
+ * @returns {JSX.Element} Les routes de l'application.
+ */
+
 function AppRouter() {
   return (
     <Routes>
