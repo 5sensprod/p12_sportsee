@@ -1,4 +1,4 @@
-import { fetchData } from '../api/apiHelper'
+import { fetchData } from '../api/fetchData'
 import {
   performanceData,
   averageSessionsData,
