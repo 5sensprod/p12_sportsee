@@ -6,13 +6,13 @@ import {
   fetchAverageSessions,
   fetchActivity,
 } from '../../services/serviceApi'
-import CardList from '../Card/CardList'
-import Score from '../Score'
-import Performance from '../Performance'
-import AverageSessions from '../AverageSessions'
-import Activity from '../Activity'
+import CardList from '../../components/Card/CardList'
+import Score from '../../components/Score'
+import Performance from '../../components/Performance'
+import AverageSessions from '../../components/AverageSessions'
+import Activity from '../../components/Activity'
 import styles from './User.module.css'
-import Loader from '../Loader'
+import Loader from '../../components/Loader'
 
 /**
  * Ce composant représente une page utilisateur individuelle.
@@ -29,6 +29,7 @@ const User = () => {
   const [averageSessions, setAverageSessions] = useState(null)
   const [activity, setActivity] = useState(null)
   const { id } = useParams()
+  console.log(id)
   const navigate = useNavigate()
 
   useEffect(() => {
